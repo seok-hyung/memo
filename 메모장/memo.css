@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+textarea {
+    width: 100%;
+    height: 6.25em;
+    resize: none;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar-container {
+    width: 344px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    /* pointer-events: none; */
+    z-index: 111;
+    /*hover시 색상 #eeecf8*/
+    background: #f6f5fa;
+    transition: box-shadow 300ms ease 0s;
+    box-shadow: rgba(0, 0, 0, 0.024) -1px 0px 0px 0px inset;
+    padding: 30px;
+    display: block;
+}
+
+.btn-toggle {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    padding: 10px;
+
+}
+
+.sidebar-container div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-bottom: 8px;
+}
+
+.main {
+    flex-basis: 80%;
+    padding: 40px;
+}
+
+#content-container {
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+#calendar {
+    width: 100%;
+    display: block;
+    padding: 0px;
+    background: white;
+    /* text-align: center; */
+    color: rgb(137 160 200);
+}
+
+caption {
+    font-size: 30px;
+    /* margin: 10px; */
+}
+
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    border-radius: 15px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #000;
+
+}
+
+th {
+    font-size: 20px;
+    height: 5rem;
+    /* border: 1px solid #BDBDBD; */
+}
+
+
+
+td {
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+
+}
+
+td>div p:first-child {
+    display: inline-block;
+    font-size: 24px;
+
+}
+
+td>div {
+    position: relative;
+}
+
+td>div>button {
+    display: none;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    padding: 0 5px;
+    border: none;
+}
+
+tr td:hover {
+    background: #cacaca;
+
+}
+
+tr td:hover .btn-add {
+    display: block;
+}
+
+td>div>button::before {}
+
+td:hover button {}
+
+th:first-child,
+td:first-child {
+    color: rgb(238, 33, 33);
+}
+
+th:last-child,
+td:last-child {
+    color: slateblue;
+}
+
+.prev,
+.next {
+    /*hover시 색상 #eeecf8*/
+    background: #eeecf8;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.close-form {
+    background-color: tomato;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-form {
+    background-color: salmon;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-memo {
+    background-color: slateblue;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-memo {
+    background-color: slateblue;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.black-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.black-bg2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.show-modal {
+    display: block;
+}
+
+.form-container,
+.edit-form {
+    width: 500px;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    margin-top: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.memo {
+    color: white;
+
+}

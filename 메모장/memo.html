@@ -1,0 +1,174 @@
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./memo.css">
+    <title>메모장</title>
+</head>
+
+<body>
+    <!-- 메모 추가 폼 -->
+    <div class="black-bg">
+        <form class="form-container">
+            <h2>메모 추가</h2>
+            <div style="display: flex;">
+                <div>
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div style="margin-left:20px;">
+                    <label for="color">색상</label>
+                    <input style="display: block;" type="color" id="color" name="color">
+                </div>
+            </div>
+            <div>
+                <label for="content" style="display:block">내용</label>
+                <textarea id="content" name="content" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label for="start-date">시작일</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+            <div>
+                <label for="end-date">종료일</label>
+                <input type="date" id="end-date" name="end-date">
+            </div>
+            <div style="display: flex; justify-content:end ;gap:10px">
+                <button class="close-form">닫기</button>
+                <button class="save-memo" type="submit">저장</button>
+            </div>
+            <!-- 메포 추가 폼 끝 -->
+        </form>
+    </div>
+    <!-- 메모 수정 폼 -->
+    <div class="black-bg2">
+        <div class="edit-form">
+            <h2>메모 수정</h2>
+            <form>
+                <div style="display: flex;">
+                    <div>
+                        <label for="edit-title">제목</label>
+                        <input type="text" id="edit-title" required>
+                    </div>
+                    <div style="margin-left:20px;">
+                        <label for="edit-color">색상</label>
+                        <input style="display: block;" type="color" id="edit-color" required>
+                    </div>
+                </div>
+                <label for="edit-content">내용</label>
+                <textarea id="edit-content" required></textarea>
+                <label for="edit-start-date">시작일</label>
+                <input type="date" id="edit-start-date" required>
+                <label for="edit-end-date">종료일</label>
+                <input type="date" id="edit-end-date" required>
+                <div style="display: flex; justify-content:end ;gap:10px">
+                    <button class="close-form">닫기</button>
+                    <button class="delete-form">삭제</button>
+                    <button type="submit" class="edit-memo">수정</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 메모 수정 폼 끝-->
+
+
+    <div class="container">
+        <div class="sidebar-container">
+            <button class="btn-toggle">버튼</button>
+            <h2>캘린더 메모장</h2>
+            <div>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <article id="content-container">
+
+            </article>
+            <article id="calendar">
+                <table>
+                    <caption>
+                        <time datetime="">
+                            <span class="year"></span>년
+                            <span class="month"></span>월
+                            <button type="button" class="prev">
+                                < </button>
+                                    <button type="button" class="next">></button>
+                        </time>
+                    </caption>
+
+                    <tr>
+                        <th scope="col">SUN</th>
+                        <th scope="col">MON</th>
+                        <th scope="col">TUE</th>
+                        <th scope="col">WED</th>
+                        <th scope="col">THU</th>
+                        <th scope="col">FRI</th>
+                        <th scope="col">SAT</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </article>
+        </div>
+    </div>
+
+    <script src="calendar.js"></script>
+    <script src="form.js"></script>
+</body>
+
+</html>
